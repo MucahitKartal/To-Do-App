@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+h2 {
+  margin: auto;
+  font-family: cursive;
+}
+h3 {
+  color: brown;
+}
+.container-2 {
+  background-color: rgb(230, 228, 228);
+  border-radius: 40px;
+}
+#input {
+  border: none;
+  background-color: inherit;
+  padding: 0.7rem 1.3rem;
+  outline: none;
+  border-radius: 40px;
+  caret-color: coral;
+}
+#add {
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  padding: 0.7rem 1.3rem;
+  width: 90px;
+  color: white;
+  background-color: orange;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/*! todolar oluştuktan sonra elementlere verilecek stylelar */
+.circle {
+  border: 1px solid rgb(212, 211, 211);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.li {
+  list-style-type: none;
+  background-origin: padding-box;
+  display: flex;
+
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+.delete {
+  position: absolute;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  color: red;
+  font-size: 1.3rem;
+  background-color: white;
+  cursor: pointer;
+}
+.task {
+  cursor: pointer;
+}
+.pchecked:first-child {
+  background-color: #ff7a48;
+  text-decoration: none;
+  content: url(ok3.jpg);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.span-checked {
+  text-decoration: line-through;
+  color: rgb(109, 107, 107);
+}
