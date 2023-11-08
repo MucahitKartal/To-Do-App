@@ -17,6 +17,7 @@ day.textContent = dayNames[new Date().getDay()];
 
 window.addEventListener("load", () => {
   ul.innerHTML = localStorage.getItem("todo");
+  taskCount();
 });
 addButton.addEventListener("click", () => {
   if (!input.value.trim()) {
@@ -52,6 +53,7 @@ addButton.addEventListener("click", () => {
 
   localStorage.setItem("todo", ul.innerHTML);
   input.focus();
+  taskCount();
 });
 
 ul.addEventListener("click", (e) => {
@@ -71,4 +73,19 @@ ul.addEventListener("click", (e) => {
     e.target.previousElementSibling.classList.toggle("pchecked");
   }
   localStorage.setItem("todo", ul.innerHTML);
+  taskCount();
 });
+
+function taskCount() {
+  const totalTask = document.querySelectorAll(".li").length;
+  const doneTask = document.querySelectorAll(".pchecked").length;
+  const result = document.querySelector(".result");
+  result.classList.add("result-task");
+  result.textContent = `${doneTask} OUT OF ${totalTask} TASK COMPLETED`;
+
+  if (!totalTask) {
+    result.style.display = "none";
+  } else {
+    result.style.display = "block";
+  }
+}

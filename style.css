@@ -109,3 +109,24 @@ h3 {
   text-decoration: line-through;
   color: rgb(109, 107, 107);
 }
+
+.result-task {
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  animation: completedText 1s linear alternate;
+  background-color: rgb(182, 39, 14);
+}
+
+@keyframes completedText {
+  0% {
+    transform: rotateX(180deg);
+  }
+
+  100% {
+    transform: rotateX(360deg);
+  }
+}
